@@ -39,6 +39,8 @@ set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
 # Downloads CPM if not already downloaded. CPM is an easy-to-use package manager nicely integrated with CMake.
 include(cmake/cpm.cmake)
 
+set(JUCE_BUILD_EXTRAS ON)
+
 # This commands downloads AND configures JUCE. It sets up some variables, like JUCE_SOURCE_DIR.
 cpmaddpackage(
   NAME
@@ -61,22 +63,23 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
 endif()
 
 # Adds a plugin target.
-set(TREMOLO_PLUGIN_NAME "TODO: set your plugin name")
+set(TREMOLO_PLUGIN_NAME "Tremoloiator")
 juce_add_plugin(
   TremoloCoursePlugin
   PRODUCT_NAME
     ${TREMOLO_PLUGIN_NAME}
   VERSION
-    # TODO: add version
+    0.0.0
   COMPANY_NAME
-    # TODO: add company
+    "woodtli.engineering"
   PLUGIN_MANUFACTURER_CODE
-    # TODO: add plugin manufacturer code
+    Weng
   PLUGIN_CODE
-    # TODO: add plugin code
+    Trml
   FORMATS
     Standalone
     AU
+    AUv3
     VST3
   IS_SYNTH
     FALSE
@@ -87,7 +90,7 @@ juce_add_plugin(
   VST3_AUTO_MANIFEST
     FALSE
   COPY_PLUGIN_AFTER_BUILD
-    FALSE
+    TRUE
 )
 
 # Configures the JUCE sources included in the plugin target.
