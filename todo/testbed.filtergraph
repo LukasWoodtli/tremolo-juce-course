@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FILTERGRAPH>
-  <FILTER uid="11" x="0.285" y="0.8565573770491803" useARA="0">
+  <FILTER uid="11" x="0.2575" y="0.7561475409836066" useARA="0">
     <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="724248cb"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="1"
@@ -16,7 +16,7 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="12" x="0.26125" y="0.5020491803278688" useARA="0">
+  <FILTER uid="12" x="0.23375" y="0.1885245901639344" useARA="0">
     <PLUGIN name="Sine Wave Synth" format="Internal" category="Synth" manufacturer="JUCE"
             version="8.0.12" file="Sine Wave Synth" uniqueId="16fd76a8" isInstrument="1"
             fileTime="0" infoUpdateTime="0" numInputs="0" numOutputs="2"
@@ -29,7 +29,7 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="14" x="0.21" y="0.2418032786885246" useARA="0">
+  <FILTER uid="14" x="0.1925" y="0.01844262295081967" useARA="0">
     <PLUGIN name="MIDI Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="a9e4f9eb"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
@@ -44,12 +44,28 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="15" x="0.285" y="0.6967213114754098" useARA="0">
+  <FILTER uid="15" x="0.25875" y="0.3954918032786885" useARA="0">
     <PLUGIN name="Tremoloiator" format="AudioUnit" category="Effect" manufacturer="woodtli.engineering"
             version="0.0.0" file="AudioUnit:Effects/aufx,Trml,Weng" uniqueId="62626573"
-            isInstrument="0" fileTime="0" infoUpdateTime="19d6eab3d91" numInputs="2"
+            isInstrument="0" fileTime="0" infoUpdateTime="19d77362629" numInputs="2"
             numOutputs="2" isShell="0" hasARAExtension="0" uid="62626573"/>
     <STATE>191.hAGaoMGcv.y0AHv.DTfAGfPBJHwDTTAWsEla0YVXiQWcxUlbTQVXzEFWkwVYsUlaz0hag0VYWMWchQWdvU1U1Ulbyk1atQEc4AWYT4VXsUlDWUlamAjzKvPCPDULQISzN7PTvTURtAWczEsCQX0S0QGb0QmDTIWarAA.RDVclgGVU4FcoQGakQFBWPRJ13iQKAUUVsUWeIFYp0Fc4sGf........AD..........V....................jH</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="L R"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="L R"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="16" x="0.2575" y="0.5676229508196722" useARA="0" uiLastX_Normal="842"
+          uiLastY_Normal="226" uiopen_Normal="0">
+    <PLUGIN name="Gain PlugIn" format="Internal" category="Effect" manufacturer="JUCE"
+            version="8.0.12" file="Gain PlugIn" uniqueId="7987ff14" isInstrument="0"
+            fileTime="0" infoUpdateTime="0" numInputs="2" numOutputs="2"
+            isShell="0" hasARAExtension="0" uid="7987ff14"/>
+    <STATE>4.LyLS8.</STATE>
     <LAYOUT>
       <INPUTS>
         <BUS index="0" layout="L R"/>
@@ -62,6 +78,8 @@
   <CONNECTION srcFilter="12" srcChannel="0" dstFilter="15" dstChannel="0"/>
   <CONNECTION srcFilter="12" srcChannel="1" dstFilter="15" dstChannel="1"/>
   <CONNECTION srcFilter="14" srcChannel="4096" dstFilter="12" dstChannel="4096"/>
-  <CONNECTION srcFilter="15" srcChannel="0" dstFilter="11" dstChannel="0"/>
-  <CONNECTION srcFilter="15" srcChannel="1" dstFilter="11" dstChannel="1"/>
+  <CONNECTION srcFilter="15" srcChannel="0" dstFilter="16" dstChannel="0"/>
+  <CONNECTION srcFilter="15" srcChannel="1" dstFilter="16" dstChannel="1"/>
+  <CONNECTION srcFilter="16" srcChannel="0" dstFilter="11" dstChannel="0"/>
+  <CONNECTION srcFilter="16" srcChannel="1" dstFilter="11" dstChannel="1"/>
 </FILTERGRAPH>
